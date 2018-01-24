@@ -49,9 +49,17 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 		if event.Type == linebot.EventTypeMessage {
 			switch message := event.Message.(type) {
 			case *linebot.TextMessage:
+				// 範例
+				/*
 				if _, err = bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage(message.ID+":"+message.Text+" OK!")).Do(); err != nil {
 					log.Print(err)
-				}
+				}*/
+				if strings.Contains(message.Text, "黑人問號") {
+					previewImageURL := "https://upload.wikimedia.org/wikipedia/zh/0/00/Miku_Hatsune.png"
+					bot.ReplyMessage(event.ReplyToken, linebot.NewImageMessage(previewImageURL, previewImageURL)).Do()
+					//out := fmt.Sprintf("HI~~~~")
+					//bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage(out)).Do()
+				} 
 			}
 		}
 	}
