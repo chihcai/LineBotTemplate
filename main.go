@@ -60,7 +60,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 					//out := fmt.Sprintf("HI~~~~")
 					//bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage(out)).Do()
 				} 
-				 else if strings.Contains(message.Text, "陽光") {
+				if strings.Contains(message.Text, "陽光") {
 					previewImageURL1 := "https://upload.cc/i/2yjGsM.png"
 					bot.ReplyMessage(event.ReplyToken, linebot.NewImageMessage(previewImageURL1, previewImageURL1)).Do()
 				}
