@@ -61,8 +61,8 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 					//bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage(out)).Do()
 				} 
 				 else if strings.Contains(message.Text, "陽光") {
-					previewImageURL := "https://upload.cc/i/2yjGsM.png"
-					bot.ReplyMessage(event.ReplyToken, linebot.NewImageMessage(previewImageURL, previewImageURL)).Do()
+					previewImageURL1 := "https://upload.cc/i/2yjGsM.png"
+					bot.ReplyMessage(event.ReplyToken, linebot.NewImageMessage(previewImageURL1, previewImageURL1)).Do()
 				}
 			}
 		}
