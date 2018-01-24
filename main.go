@@ -65,7 +65,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 					bot.ReplyMessage(event.ReplyToken, linebot.NewImageMessage(previewImageURL1, previewImageURL1)).Do()
 				}
 				if strings.Contains(message.Text, "喔喔喔滾") {
-					linebot.exit()
+					
 				}
 			}
 		}
