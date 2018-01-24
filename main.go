@@ -55,7 +55,7 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 					log.Print(err)
 				}*/
 				if strings.Contains(message.Text, "黑人問號") {
-					previewImageURL := "https://upload.wikimedia.org/wikipedia/zh/0/00/Miku_Hatsune.png"
+					previewImageURL := "https://upload.cc/i/nH5Kpe.jpg"
 					bot.ReplyMessage(event.ReplyToken, linebot.NewImageMessage(previewImageURL, previewImageURL)).Do()
 					//out := fmt.Sprintf("HI~~~~")
 					//bot.ReplyMessage(event.ReplyToken, linebot.NewTextMessage(out)).Do()
