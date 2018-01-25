@@ -64,8 +64,13 @@ func callbackHandler(w http.ResponseWriter, r *http.Request) {
 					previewImageURL1 := "https://upload.cc/i/2yjGsM.png"
 					bot.ReplyMessage(event.ReplyToken, linebot.NewImageMessage(previewImageURL1, previewImageURL1)).Do()
 				}
-				if strings.Contains(message.Text, "喔喔喔滾") {
-					
+				if strings.Contains(message.Text, "甜蜜") {
+					previewImageURL1 := "https://upload.cc/i/Gs4xTV.jpg"
+					bot.ReplyMessage(event.ReplyToken, linebot.NewImageMessage(previewImageURL1, previewImageURL1)).Do()
+				}
+				if strings.Contains(message.Text, "酸酸") {
+					previewImageURL1 := "https://upload.cc/i/Jun8M1.jpg"
+					bot.ReplyMessage(event.ReplyToken, linebot.NewImageMessage(previewImageURL1, previewImageURL1)).Do()
 				}
 			}
 		}
